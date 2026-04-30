@@ -1,0 +1,19 @@
+<!-- AI Assistant Tab Button: place this with your other website tabs/buttons -->
+<button class="tab-btn" onclick="showTab('aiAssistant')">AI Assistant</button>
+
+<!-- AI Assistant Section: place this with your other tab sections -->
+<section id="aiAssistant" class="tab-content" style="display:none;">
+  <div class="ai-card">
+    <h2>✈️ Aviation AI Assistant</h2>
+    <p class="ai-subtitle">Ask for help with IMSAFE, PAVE, preflight planning, risk management, weather thinking, checklists, and aviation decision-making.</p>
+
+    <textarea id="aiQuestion" placeholder="Example: Help me evaluate this flight using PAVE and IMSAFE..." rows="6"></textarea>
+
+    <div class="ai-actions">
+      <button onclick="askAI()">Ask AI</button>
+      <button class="secondary" onclick="clearAI()">Clear</button>
+    </div>
+
+    <div id="aiResponse" class="ai-response">Your AI response will appear here.</div>
+  </div>
+</section>

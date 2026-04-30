@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviation Website with AI Assistant</title>
+  <link rel="stylesheet" href="ai-assistant.css" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: white; }
+    header { padding: 20px; background: #020617; text-align: center; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 15px; background: #111827; }
+    .tab-content { padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Aviation Preflight App</h1>
+  </header>
+
+  <nav>
+    <button class="tab-btn" onclick="showTab('home')">Home</button>
+    <button class="tab-btn" onclick="showTab('aiAssistant')">AI Assistant</button>
+  </nav>
+
+  <section id="home" class="tab-content">
+    <h2>Home</h2>
+    <p>Your existing website content goes here.</p>
+  </section>
+
+  <section id="aiAssistant" class="tab-content" style="display:none;">
+    <div class="ai-card">
+      <h2>✈️ Aviation AI Assistant</h2>
+      <p class="ai-subtitle">Ask for help with IMSAFE, PAVE, preflight planning, risk management, weather thinking, checklists, and aviation decision-making.</p>
+
+      <textarea id="aiQuestion" placeholder="Example: Help me evaluate this flight using PAVE and IMSAFE..." rows="6"></textarea>
+
+      <div class="ai-actions">
+        <button onclick="askAI()">Ask AI</button>
+        <button class="secondary" onclick="clearAI()">Clear</button>
+      </div>
+
+      <div id="aiResponse" class="ai-response">Your AI response will appear here.</div>
+    </div>
+  </section>
+
+  <script src="ai-assistant.js"></script>
+</body>
+</html>
